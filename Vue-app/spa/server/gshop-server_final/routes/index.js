@@ -176,6 +176,7 @@ router.get('/index_category', function (req, res) {
 router.get('/shops', function (req, res) {
   const latitude = req.query.latitude
   const longitude = req.query.longitude
+  console.log(latitude,longitude)
 
   setTimeout(function () {
     const data = require('../data/shops.json')

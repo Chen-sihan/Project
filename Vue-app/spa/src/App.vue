@@ -1,21 +1,34 @@
 <template>
   <div id="app">
-    Vue
-    <router-view />
-    <FooterGuide></FooterGuide>
+  
+
+    <router-view></router-view>
+    <FooterGuide  v-show='$route.meta.title'></FooterGuide>
   </div>
 </template>
 
 <script>
-import FooterGuide from '../src/components/FooterGuide/FooterGuide'
+
+import  FooterGuide from './components/FooterGuide/FooterGuide'
 export default {
-  name: "App",
+
+  name: 'App',
+  data() {
+    return {
+      isflag:false
+    }
+  },
   components:{
     FooterGuide
   }
-};
+}
 </script>
 
-<style>
+<style  lang='stylus'>
+#app
+  width 100%
+  height 100%
+  background #f5f5f5
+  position  relative
 
 </style>
